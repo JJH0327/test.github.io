@@ -1,0 +1,110 @@
+<!--"Provide a complete HTML document that includes an introduction section with a profile photo and a brief text about hobbies or interests, a project gallery section with clickable images that show project details on click, and a contact form section with email and message fields that validates input on submission. Ensure the document contains embedded CSS for styling the sections, images, and
+-->
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>My Portfolio</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+    header {
+      background-color: #f2f2f2;
+      padding: 20px;
+      text-align: center;
+    }
+    header img {
+      border-radius: 50%;
+      width: 200px;
+      height: 200px;
+    }
+    section {
+      padding: 20px;
+    }
+    section h2 {
+      text-align: center;
+    }
+    section p {
+      text-align: center;
+    }
+    .project {
+      display: inline-block;
+      margin: 10px;
+      text-align: center;
+    }
+    .project img {
+      width: 200px;
+      height: 200px;
+    }
+    .project p {
+      display: none;
+    }
+    form {
+      text-align: center;
+    }
+    form input, form textarea {
+      margin: 10px;
+      padding: 10px;
+    }
+    form button {
+      padding: 10px 20px;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <img src="1144527.png" alt="Profile photo" />
+    <h1>Jake Jang</h1>
+  </header>
+
+  <section>
+    <h2>About Me</h2>
+    <p>I'm a coding instructor </p>
+  </section>
+
+  <section>
+    <h2>Projects</h2>
+    <div class="project">
+      <img src="1144527.png" alt="Project 1" />
+      <p>Enter the details of the project</p>
+    </div>
+    <div class="project">
+      <img src="1144527.png" alt="Project 2" />
+      <p>Enter the details of the project</p>
+    </div>
+    <div class="project">
+      <img src="1144527.png" alt="Project 3" />
+      <p>Enter the details of the project</p>
+    </div>
+  </section>
+
+  <section>
+    <h2>Contact</h2>
+    <form>
+      <input type="email" placeholder="Enter your email" />
+      <textarea placeholder="Enter your message"></textarea>
+      <button>Submit</button>
+    </form>
+  </section>
+
+  <script>
+    var projects = document.querySelectorAll('.project');
+    projects.forEach(function(project) {
+      project.addEventListener('click', function() {
+        var details = project.querySelector('p');
+        if (details.style.display === 'none') {
+          details.style.display = 'block';
+        } else {
+          details.style.display = 'none';
+        }
+      });
+    });
+  </script>
+</body>
+
+</html>
+
